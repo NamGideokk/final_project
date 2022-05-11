@@ -354,7 +354,9 @@
 .adr-input:focus {
   border: 1px solid var(--accent-default);
 }
-
+.adr-input {
+  margin-top: -10px;
+}
 .ages-select {
   width: 400px;
   height: 40px;

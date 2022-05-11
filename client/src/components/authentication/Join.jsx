@@ -73,7 +73,8 @@ const Join = () => {
   const idRegex = /^[a-z][a-zA-Z0-9]{5,15}$/; // 아이디 정규표현식
   const pwRegex = /^(?=.*[a-zA-Z])(?=.*[#?!@$%^&*-])(?=.*[0-9]).{8,16}$/; // 비밀번호 정규표현식
   const nickRegex = /[가-힣a-zA-Z0-9].{2,12}$/;
-  const emailRegex = /^[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{2,3}$/;
+  const emailRegex =
+    /^[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{2,3}$/;
 
   // 아이디, 비밀번호, 비밀번호 재입력 별 유효성 검사 에러문
   const [idRegErrorText, setIdRegErrorText] = useState(
@@ -336,7 +337,7 @@ const Join = () => {
       .then((res) => {
         if (res.data === false) {
           alert('사용 가능한 아이디입니다.');
-        } else if (res.data === true){
+        } else if (res.data === true) {
           alert('이미 등록된 아이디입니다.');
         }
       })
@@ -571,7 +572,7 @@ const Join = () => {
 
         <input
           type="text"
-          className="ages-select"
+          className="adr-input"
           name="deatilJusoData"
           placeholder="상세 주소를 입력하세요"
           onChange={(e) => {
